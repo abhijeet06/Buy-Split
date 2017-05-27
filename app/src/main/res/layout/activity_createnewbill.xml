@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/containerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dip"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:id="@+id/rlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/tableRow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/orderNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:text="Order Number :"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="26dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tableRow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tableRow1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bill Amount :(Rs)"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="100"
+                    android:textColor="#000000"
+                    android:textSize="24dp" />
+
+            </LinearLayout>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tableRow3"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dip"
+                android:visibility="gone"
+                android:gravity="center">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_marginLeft="20dip"
+                    android:elevation="3dp"
+                    card_view:cardCornerRadius="10dp">
+
+                    <Button
+                        android:id="@+id/addfriend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:onClick="addFriends"
+                        android:background="#00000000"
+                        android:text=" Add Friends "
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="#000000"
+                        android:textSize="18dp" />
+                </android.support.v7.widget.CardView>
+
+            </TableRow>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlayout"
+            android:layout_margin="10dp">
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"></ListView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttomlayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentBottom="true">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#000000" />
+
+        <RelativeLayout
+            android:id="@+id/buttom"
+            android:layout_width="match_parent"
+            android:layout_height="78dip"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/line">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_centerInParent="true"
+                android:elevation="3dp"
+                card_view:cardCornerRadius="10dp">
+
+                <Button
+                    android:id="@+id/split"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dip"
+                    android:text="  Split  "
+                    android:textSize="18dp"
+                    android:background="#00000000"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#000000" />
+            </android.support.v7.widget.CardView>
+
+            <!--<Button-->
+            <!--android:id="@+id/notify"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="40dip"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:layout_marginRight="20dip"-->
+            <!--android:background="#242A33"-->
+            <!--android:text="  Notify  "-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+            <!--android:textColor="#ffffff" />-->
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
